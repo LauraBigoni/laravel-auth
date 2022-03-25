@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 v-text="title">BOOLPRESS</h1>
-		<h2 v-text="description">Sito in costruzione</h2>
+		<h1 class="display-1 pb-5" v-text="title"></h1>
+		<h2 v-text="description"></h2>
 	</div>
 </template>
 

@@ -25,7 +25,7 @@ export default {
 	data() {
 		return {
 			title: "BOOLPRESS",
-			description: "Sito in costruzione",
+			description: "- Sito in costruzione -",
 		};
 	},
 };

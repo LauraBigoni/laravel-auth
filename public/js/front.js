@@ -1936,7 +1936,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       title: "BOOLPRESS",
-      description: "Sito in costruzione"
+      description: "- Sito in costruzione -"
     };
   }
 });
@@ -37596,13 +37596,12 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", { domProps: { textContent: _vm._s(_vm.title) } }, [
-      _vm._v("BOOLPRESS"),
-    ]),
+    _c("h1", {
+      staticClass: "display-1 pb-5",
+      domProps: { textContent: _vm._s(_vm.title) },
+    }),
     _vm._v(" "),
-    _c("h2", { domProps: { textContent: _vm._s(_vm.description) } }, [
-      _vm._v("Sito in costruzione"),
-    ]),
+    _c("h2", { domProps: { textContent: _vm._s(_vm.description) } }),
   ])
 }
 var staticRenderFns = []

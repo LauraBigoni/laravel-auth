@@ -1,24 +1,22 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Boolpress</div>
-
-                    <div class="card-body">
-                        <h1>Sito in costruzione</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="content">
+					<div class="title m-b-md">
+						<h1>BOOLPRESS</h1>
+                        <h2>Sito in costruzione</h2>
+					</div>
+					<div class="links">
+						<!-- <a href="#">Blog</a>
+                    <a href="#">Contacts</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-    name: 'App'
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+name: "App";
 </script>

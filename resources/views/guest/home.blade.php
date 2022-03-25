@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -90,15 +90,15 @@
         @endif
 
         <div id="root">
-            <div class="content">
+            {{-- <div class="content">
                 <div class="title m-b-md">
-                    {{-- {{ env('APP_NAME') }} --}}
+                    {{ env('APP_NAME') }}
                 </div>
                 <div class="links">
-                    {{-- <a href="#">Blog</a>
-                    <a href="#">Contacts</a> --}}
+                    <a href="#">Blog</a>
+                    <a href="#">Contacts</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </body>

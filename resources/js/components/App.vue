@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
+                    <div class="card-header">Boolpress</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <h1>Sito in costruzione</h1>
                     </div>
                 </div>
             </div>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+    name: 'App'
     export default {
         mounted() {
             console.log('Component mounted.')

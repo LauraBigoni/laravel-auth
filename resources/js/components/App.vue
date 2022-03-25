@@ -4,8 +4,7 @@
 			<div class="col-md-8">
 				<div class="content">
 					<div class="title m-b-md">
-						<h1>BOOLPRESS</h1>
-                        <h2>Sito in costruzione</h2>
+						<Header :title="title" :description="description" />
 					</div>
 					<div class="links">
 						<!-- <a href="#">Blog</a>
@@ -18,5 +17,16 @@
 </template>
 
 <script>
-name: "App";
+import Header from "./Header.vue";
+
+export default {
+	name: "App",
+	components: { Header },
+	data() {
+		return {
+			title: "BOOLPRESS",
+			description: "Sito in costruzione",
+		};
+	},
+};
 </script>

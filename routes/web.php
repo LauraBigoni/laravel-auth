@@ -12,19 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// * Qua posso inserire ['register' => false] per esempio, e tolgo il tasto register dalla navbar
+Auth::routes();
 
+// * Tutte le rotte sono protette con il middleware auth
 Route::middleware('auth')
 ->prefix('admin')
 ->name('admin.')
 ->namespace('Admin')
 ->group(function () {
-    
+    // TODO: cancellare il name?
     Route::get('/', 'HomeController@index')->name('home');
     Route::resource('posts', 'PostController');
 });
 
-Auth::routes();
-
-Route::get('/', function () {
+// * {any} Un parametro che può anche non esserci e se c'è ".*" può essere qualunque cosa. In questo modo qualunque rotta deve andare su Vue e andrà gestita in frontend.
+Route::get('{any?}', function () {
     return view('guest.home');
-});
+})->where("any", ".*");
+
+// * Preparo la rotta con resource per il futuro
+Route::resource('guest.posts', 'Guest\PostController');

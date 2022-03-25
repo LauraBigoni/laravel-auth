@@ -81,12 +81,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{ env('APP_NAME') }}
+                    <div id="root">
+                        
+                    </div>
+                    {{-- {{ env('APP_NAME') }} --}}
+                    <p>Sito in costruzione</p>
                 </div>
 
                 <div class="links">
-                    <a href="#">Blog</a>
-                    <a href="#">Contacts</a>
+                    {{-- <a href="#">Blog</a>
+                    <a href="#">Contacts</a> --}}
                 </div>
             </div>
         </div>

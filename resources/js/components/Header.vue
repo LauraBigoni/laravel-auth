@@ -1,7 +1,6 @@
 <template>
-	<div>
-		<h1 class="display-1 pb-5" v-text="title"></h1>
-		<h2 v-text="description"></h2>
+	<div class="flex-center position-ref full-height">
+		<img :src="imgUrl" alt="boolpress bg" />
 	</div>
 </template>
 
@@ -9,5 +8,10 @@
 export default {
 	name: "Header",
 	props: ["title", "description"],
+	data() {
+		return {
+			imgUrl: "https://i.postimg.cc/DyVv3SdY/boolpressbg.png",
+		};
+	},
 };
 </script>

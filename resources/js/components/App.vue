@@ -4,7 +4,7 @@
 			<div class="col-md-8">
 				<div class="content">
 					<div class="title m-b-md">
-						<Header :title="title" :description="description" />
+						<Header />
 					</div>
 					<div class="links">
 						<!-- <a href="#">Blog</a>

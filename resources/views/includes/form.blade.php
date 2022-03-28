@@ -23,24 +23,33 @@
 
                 <div class="form-group col-6">
                     <label for="title">Titolo:</label>
-                    <input type="text" class="form-control" id="title" name="title" required>
-                    <div class="invalid-feedback">
-                        Inserisci un titolo corretto.
-                    </div>
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
+                        value="{{ old('title', $post->title) }}" required>
+                    @error('title')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="form-group col-12">
                     <label for="content">Contenuto:</label>
-                    <textarea class="form-control" id="content" name="content" rows="10" required></textarea>
-                    <div class="invalid-feedback">
-                        Campo invalido
-                    </div>
+                    <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content" rows="10"
+                        required>{{ old('content', $post->content) }}</textarea>
+                    @error('content')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="form-group col-11">
                     <label for="image">Immagine:</label>
-                    <input type="url" class="form-control" id="image" name="image">
-                    <div class="valid-feedback">
-                        Campo valido
-                    </div>
+                    <input type="url" class="form-control @error('image') is-invalid @enderror" id="image" name="image"
+                        value="{{ old('image', $post->image) }}">
+                    @error('image')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="col-1">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&usqp=CAU"

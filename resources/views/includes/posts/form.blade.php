@@ -61,9 +61,8 @@
                 @enderror
             </div>
             <div class="col-1">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&usqp=CAU"
-                    value="{{ old('image', $post->image) }}" width="50px" class="img-fluid rounded"
-                    alt="image placeholder" id="preview">
+                <img src="{{ old('image', $post->image) ??'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&usqp=CAU' }}"
+                    width="50px" class="img-fluid rounded" alt="image placeholder" id="preview">
             </div>
             <hr>
 

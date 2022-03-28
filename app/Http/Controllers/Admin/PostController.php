@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index(Post $post)
     {
-        $posts = Post::orderBy('updated_at', 'DESC')->get();
+        $posts = Post::orderBy('updated_at', 'DESC')->paginate(10);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -109,6 +109,7 @@ class PostController extends Controller
         ]);
 
         $data = $request->all();
+        $data['slug'] = Str::slug($request->title, '-');
         $post->update($data);
 
         return redirect()->route('admin.posts.show', $post)->with('message', "$post->title aggiornato con successo!")->with('type', 'success');

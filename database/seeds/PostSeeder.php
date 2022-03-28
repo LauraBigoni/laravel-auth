@@ -14,9 +14,9 @@ class PostSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $post = new Post();
-            $post->title = $faker->sentence();
+            $post->title = $faker->sentence(4);
             $post->content = $faker->paragraphs(3, true);
             $post->image = $faker->imageUrl(360, 360);
             $post->slug = Str::slug($post->title, '-');

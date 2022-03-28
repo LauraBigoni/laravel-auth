@@ -21,6 +21,7 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Publish</th>
                             <th scope="col">Title</th>
                             <th scope="col">Creation date</th>
                             <th scope="col">Actions</th>
@@ -30,9 +31,13 @@
                         @forelse ($posts as $post)
                             <tr>
                                 <th scope="row">{{ $post->id }}</th>
+                                <td>
+                                    {{-- <i class="fa-solid fa-toggle-on"></i> --}}
+                                    <a class="btn btn-sm btn-light mr-2" href="#"><i class="fa-solid fa-toggle-off"></i></a>
+                                </td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->created_at }}</td>
-                                <td class="d-flex align-items-center justify-content-center">
+                                <td class="d-flex align-items-center justify-content-start">
                                     <a class="btn btn-sm btn-dark mr-2"
                                         href="{{ route('admin.posts.show', $post->id) }}"><i
                                             class="fa-regular fa-file-lines"></i></a>
@@ -52,7 +57,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                     <h3>Non ci sono post</h3>
                                 </td>
                             </tr>
@@ -62,4 +67,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/delete-confirm.js') }}"></script>
 @endsection

@@ -21,8 +21,8 @@ Route::middleware('auth')
 ->name('admin.')
 ->namespace('Admin')
 ->group(function () {
-    // TODO: cancellare il name?
     Route::get('/', 'HomeController@index')->name('home');
+    Route::patch('/posts/{post}/toggle', 'PostController@toggle')->name('posts.toggle');
     Route::resource('posts', 'PostController');
 });
 

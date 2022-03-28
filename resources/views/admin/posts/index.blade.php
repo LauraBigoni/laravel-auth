@@ -33,8 +33,13 @@
                             <tr>
                                 <th scope="row">{{ $post->id }}</th>
                                 <td>
-                                    <a class="btn btn-sm btn-light mr-2" href="#"><i
-                                            class="fa-solid fa-toggle-{{ $post->is_published ? 'on' : 'off' }}"></i></a>
+                                    <form action="{{ route('admin.posts.toggle', $post->id) }}" method="POST">
+                                        @method('PATCH')
+                                        @csrf
+                                        <button class="btn btn-sm" type="submit"><i
+                                                class="fa-solid fa-toggle-{{ $post->is_published ? 'on' : 'off' }} text-{{ $post->is_published ? 'success' : 'danger' }}"></i>
+                                        </button>
+                                    </form>
                                 </td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->created_at }}</td>

@@ -46,13 +46,29 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&usqp=CAU"
                         width="60px" class="img-fluid rounded" alt="image placeholder" id="preview">
                 </div>
+                <hr>
 
                 <div class="d-flex justify-content-end align-items-center ml-auto pt-3">
                     <button type="reset" class="btn btn-sm btn-info mr-2">Reset <i
                             class="fa-solid fa-arrow-rotate-left"></i></button>
-                    <button type="submit" class="btn btn-sm btn-info">Aggiungi <i class="fa-solid fa-plus"></i></button>
+                    <button type="submit" class="btn btn-sm btn-info">Salva <i
+                            class="fa-solid fa-floppy-disk"></i></button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+@section('scripts')
+    <script>
+        const placeholder =
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&usqp=CAU";
+        const imageInput = document.getElementById('image');
+        const imagePreview = document.getElementById('preview');
+
+        imageInput.addEventListener('change', (e) => {
+            const preview = imageInput.value ?? placeholder;
+            imagePreview.setAttribute('src', preview);
+        })
+    </script>
+@endsection

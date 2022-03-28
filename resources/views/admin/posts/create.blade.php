@@ -5,5 +5,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/image-preview.js') }}" defer></script>
+    <script src="{{ asset('js/preview-image.js') }}" defer></script>
 @endsection

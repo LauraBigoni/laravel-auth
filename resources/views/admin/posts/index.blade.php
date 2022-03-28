@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <header>
-                    <h1 class="text-center">Tutti i post:</h1>
+                    <h1 class="text-center">Lista dei post</h1>
 
                     @if (session('message'))
                         <div class="container alert alert-{{ session('type') }} text-center" role="alert">

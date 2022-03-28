@@ -26,9 +26,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Post $post)
+    public function create()
     {
-        $post = [];
+        $post = new Post();
         return view('admin.posts.create', compact('post'));
     }
 

@@ -8,7 +8,7 @@
                     <h1 class="text-center">Tutti i post:</h1>
                 </header>
                 <div class="add-posts d-flex justify-content-end mb-4">
-                    <a class="btn btn-sm btn-success" href="{{ route('admin.posts.create') }}"><i
+                    <a class="btn btn-sm btn-info" href="{{ route('admin.posts.create') }}"><i
                             class="fa-solid fa-plus"></span></i></a>
                 </div>
                 <table class="table">

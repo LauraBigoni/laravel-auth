@@ -65,7 +65,13 @@
                     width="50px" class="img-fluid rounded" alt="image placeholder" id="preview">
             </div>
             <hr>
-
+            <div class="col-6">
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="is-published" name="is_published"
+                        {{ old('is_published', $post->is_published) ? 'checked' : '' }}>
+                    <label class="form-check-label btn btn-sm btn-light" for="is-published">Pubblica</label>
+                </div>
+            </div>
             <div class="d-flex justify-content-end align-items-center ml-auto pt-3">
                 <button type="reset" class="btn btn-sm btn-info mr-2">Reset <i
                         class="fa-solid fa-arrow-rotate-left"></i></button>

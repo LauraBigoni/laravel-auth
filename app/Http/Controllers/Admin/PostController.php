@@ -58,6 +58,10 @@ class PostController extends Controller
 
         $post->fill($data);
         $post->slug = Str::slug($request->title, '-');
+        
+        if (array_key_exists('is_published', $data)) {
+            $post['is_published'] = true;
+        }
 
         $post->save();
 
@@ -109,6 +113,11 @@ class PostController extends Controller
         ]);
 
         $data = $request->all();
+
+        if (array_key_exists('is_published', $data)) {
+            $post['is_published'] = true;
+        }
+
         $data['slug'] = Str::slug($request->title, '-');
         $post->update($data);
 

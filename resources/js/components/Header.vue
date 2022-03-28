@@ -1,6 +1,6 @@
 <template>
 	<div class="flex-center position-ref full-height">
-		<img :src="imgUrl" alt="boolpress bg" />
+		<img src="images/boolpressbg.png" alt="boolpress bg" />
 	</div>
 </template>
 

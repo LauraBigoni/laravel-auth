@@ -37590,11 +37590,20 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "flex-center position-ref full-height" }, [
-    _c("img", { attrs: { src: _vm.imgUrl, alt: "boolpress bg" } }),
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-center position-ref full-height" }, [
+      _c("img", {
+        attrs: { src: "images/boolpressbg.png", alt: "boolpress bg" },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 

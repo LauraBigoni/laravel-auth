@@ -5,7 +5,7 @@
             <div class="col-12">
                 @guest
                 @else
-                <img src="{{ asset('images/boolpresslogo.png') }}" alt="boolpress logo">
+                    <img src="{{ asset('images/boolpresslogo.png') }}" alt="boolpress logo">
                 @endguest
             </div>
         </div>
@@ -24,7 +24,6 @@
 
                 <div class="text logo-text">
                     @guest
-                        <span class="name">Benvenuto</span>
                         <span class="profession">Non sei registrato</span>
                     @else
                         <span class="name">Admin {{ Auth::user()->name }}</span>
@@ -102,7 +101,8 @@
 
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit();"><i
+                                    class="fa-solid fa-right-from-bracket"></i>
                                 <span class="text nav-text">{{ __('Logout') }}</span>
 
                             </a>

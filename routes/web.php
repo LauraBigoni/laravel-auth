@@ -30,6 +30,3 @@ Route::middleware('auth')
 Route::get('{any?}', function () {
     return view('guest.home');
 })->where("any", ".*");
-
-// * Preparo la rotta con resource per il futuro
-Route::resource('guest.posts', 'Guest\PostController');

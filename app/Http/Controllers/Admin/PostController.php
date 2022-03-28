@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index(Post $post)
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('updated_at', 'DESC')->get();
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -55,11 +55,13 @@ class PostController extends Controller
 
         $data = $request->all();
         $post = new Post();
-        $post['slug'] = Str::slug($request->title, '-');
+
         $post->fill($data);
+        $post->slug = Str::slug($request->title, '-');
+
         $post->save();
 
-        return redirect()->route('admin.posts.show', $post)->with('message', "$post->title aggiunto con successo!")->with('type', 'success');;
+        return redirect()->route('admin.posts.show', $post)->with('message', "$post->title aggiunto con successo!")->with('type', 'success');
     }
 
     /**

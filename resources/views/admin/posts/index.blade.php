@@ -23,7 +23,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Publish</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Creation date</th>
+                            <th scope="col">Updated at</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>

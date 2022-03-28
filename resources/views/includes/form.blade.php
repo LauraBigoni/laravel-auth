@@ -8,7 +8,7 @@
 
             <h1 class="text-center">Crea un nuovo post</h1>
             @if ($errors->any())
-                <div class="alert alert-info text-center" role="alert">
+                <div class="alert alert-{{ session('type') ?? 'info' }} text-center" role="alert">
                     <ul class="list-unstyled">
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>

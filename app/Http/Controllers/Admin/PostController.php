@@ -59,7 +59,7 @@ class PostController extends Controller
         $post->fill($data);
         $post->save();
 
-        return redirect()->route('admin.posts.show', $post);
+        return redirect()->route('admin.posts.show', $post)->with('message', "$post->title aggiunto con successo!")->with('type', 'success');;
     }
 
     /**
@@ -122,6 +122,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('admin.posts.index')->with('message', "$post->title eliminato con successo!")->with('type', 'success');
+        return redirect()->route('admin.posts.index')->with('message', "$post->title eliminato con successo!")->with('type', 'danger');
     }
 }

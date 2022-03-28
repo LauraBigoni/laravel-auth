@@ -57,7 +57,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="5">
+                                <td colspan="5" class="text-center">
                                     <h3>Non ci sono post</h3>
                                 </td>
                             </tr>
@@ -70,5 +70,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/delete-confirm.js') }}"></script>
+    <script src="{{ asset('js/delete-confirm.js') }}" defer></script>
 @endsection

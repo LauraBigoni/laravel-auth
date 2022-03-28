@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row">
+            @if (session('message'))
+                <div class="container alert alert-{{ session('type') }} text-center" role="alert">
+                    <p>{{ session('message') }}</p>
+                </div>
+            @endif
             <div class="d-flex justify-content-end align-items-center col-12 pt-3">
                 <a class="btn btn-sm btn-info ml-auto" href="{{ route('admin.posts.index') }}">Indietro <i
                         class="fa-solid fa-arrow-left"></i></a>

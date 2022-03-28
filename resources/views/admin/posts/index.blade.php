@@ -33,8 +33,8 @@
                             <tr>
                                 <th scope="row">{{ $post->id }}</th>
                                 <td>
-                                    {{-- <i class="fa-solid fa-toggle-on"></i> --}}
-                                    <a class="btn btn-sm btn-light mr-2" href="#"><i class="fa-solid fa-toggle-off"></i></a>
+                                    <a class="btn btn-sm btn-light mr-2" href="#"><i
+                                            class="fa-solid fa-toggle-{{ $post->is_published ? 'on' : 'off' }}"></i></a>
                                 </td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->created_at }}</td>
@@ -66,11 +66,11 @@
                         @endforelse
                     </tbody>
                 </table>
-                <div class="d-flex justify-content-center mt-4">
-                    @if ($posts->hasPages())
+                @if ($posts->hasPages())
+                    <div class="d-flex justify-content-center mt-4">
                         {{ $posts->links() }}
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

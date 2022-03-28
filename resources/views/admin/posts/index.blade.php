@@ -6,6 +6,12 @@
             <div class="col-12">
                 <header>
                     <h1 class="text-center">Tutti i post:</h1>
+
+                    @if (session('message'))
+                        <div class="container alert alert-{{ session('type') }} text-center" role="alert">
+                            <p>{{ session('message') }}</p>
+                        </div>
+                    @endif
                 </header>
                 <div class="add-posts d-flex justify-content-end mb-4">
                     <a class="btn btn-sm btn-info" href="{{ route('admin.posts.create') }}"><i
@@ -33,8 +39,15 @@
                                     <a class="btn btn-sm btn-dark mr-2"
                                         href="{{ route('admin.posts.edit', $post->id) }}"><i
                                             class="text-white fa-solid fa-pen-to-square"></i></a>
-                                    <a class="btn btn-sm btn-dark" href="{{ route('admin.posts.destroy', $post->id) }}"><i
-                                            class="text-white fa-solid fa-trash"></i></a>
+
+                                    <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST"
+                                        class="delete-form" data-name="{{ $post->title }}">
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button class="fw-bold btn btn-sm btn-dark" type="submit"><i
+                                                class="text-white fa-solid fa-trash"></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty

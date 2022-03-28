@@ -7,4 +7,4 @@ deleteForms.forEach(form => {
         const confirmDelete = confirm(`Sei sicuro di voler eliminare ${name}?`);
         if (confirmDelete) e.target.submit();
     });
-})
+});
